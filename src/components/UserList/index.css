@@ -2,4 +2,53 @@
   box-shadow: 0px 0px 1px 1px black;
   padding: 10px;
   width: 30vw;
+  backdrop-filter: blur(10px);
+  width: 300px;
+  margin: 0px auto;
+}
+
+.item-rank {
+  background: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  height: 5vh;
+  width: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.item-card {
+  width: 20vh;
+  height: 7vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  backdrop-filter: blur(3px);
+  color: white;
+  display: flex;
+  flex-direction: row;
+
+  font-family: Source Sans Pro, sans-serif;
+}
+
+.userlist .item-card:first-child {
+  background: #5bdbab;
+}
+
+.userlist .item-card:nth-child(2) {
+  background: #45a895;
+}
+
+.userlist .item-card:nth-child(3) {
+  background: #368285;
+}
+
+.userlist .item-card:nth-child(4) {
+  background: #45a895;
+}
+
+.userlist .item-card:nth-child(5) {
+  background: #368285;
 }

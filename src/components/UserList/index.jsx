@@ -6,8 +6,8 @@ const InputBox = (props) => {
     <div className="userlist">
       {props.users.map((item) => {
         return (
-          <div>
-            <span>{item?.rank || ""}</span>
+          <div className="item-card">
+            <span className="item-rank">{item?.rank || ""}</span>
             <span>{item.name}</span>
           </div>
         );
@@ -15,5 +15,7 @@ const InputBox = (props) => {
     </div>
   );
 };
+
+//https://codepen.io/davidkpiano/pen/xwyVXO
 
 export default InputBox;

@@ -3,24 +3,28 @@ import Navbar from "./components/NavBar";
 import InputBox from "./components/InputBox";
 import UserList from "./components/UserList";
 
+import "./index.css";
+
 export default function App(props) {
   const key = "1";
   const [appState, updateAppState] = React.useState({ userList: [] });
 
   const onUserAdd = (name) => {
-    updateAppState({ userList: [...appState.userList, { name: name }] });
+    updateAppState({
+      userList: [
+        ...appState.userList,
+        { name: name, rank: appState.userList.length + 1 }
+      ]
+    });
   };
 
   return (
-    <div key={key}>
-      <Navbar
-        navArray={[
-          { title: "home", key: "home" },
-          { title: "contact", key: "contace" }
-        ]}
-      />
+    <main className="app">
+      <header>
+        <div>Shuffle App</div>
+      </header>
       <InputBox onEnter={onUserAdd} />
       <UserList users={appState.userList} />
-    </div>
+    </main>
   );
 }

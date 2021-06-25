@@ -3,3 +3,19 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.app {
+  border: 1px solid black;
+  height: 90vh;
+  width: 60vw;
+  margin: 30px auto;
+  background: rgb(31, 24, 24, 0.9);
+}
+
+#root {
+}
+
+body {
+  background: linear-gradient(135deg, #4effdf, #48bbde, #f47ec6);
+  height: 100vh;
+}
