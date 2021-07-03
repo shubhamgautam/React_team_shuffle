@@ -23,8 +23,8 @@ const InputBox = (props) => {
 
   return (
     <div className="add-cont">
-      <InputComp />
-      <InputComp />
+      <InputComp btnLabel={"Add New Member"} />
+      <InputComp btnLabel={"Add new Team"} />
     </div>
   );
 };

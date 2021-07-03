@@ -15,16 +15,28 @@
 
 .hide {
   transform: scaleX(0);
+  width: 0px;
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 input {
   height: 40px;
-  width: 100%;
-  border: 1px solid black;
+  width: 0px;
   border-radius: 5px;
-  box-shadow: 0px 1px 1px solid black;
-  padding: 5px;
   line-height: normal;
+  width: 0px;
+  display: none;
   background-color: #ecb8c8;
+}
+
+.show {
+  width: 300px;
+  display: block;
+  transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.input-comp {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
 }
