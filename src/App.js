@@ -7,7 +7,10 @@ import "./index.css";
 
 export default function App(props) {
   const key = "1";
-  const [appState, updateAppState] = React.useState({ userList: [] });
+  const [appState, updateAppState] = React.useState({
+    userList: [],
+    teams: []
+  });
 
   const onUserAdd = (name) => {
     updateAppState({
@@ -18,12 +21,19 @@ export default function App(props) {
     });
   };
 
+  const onTeamsAdd = (teamName) => {
+    updateAppState((prevState) => ({
+      ...prevState,
+      teams: [...appState.teams, { name: teamName }]
+    }));
+  };
+
   return (
     <main className="app">
       <header>
         <div>Shuffle App</div>
       </header>
-      <InputBox onEnter={onUserAdd} />
+      <InputBox onUserAdd={onUserAdd} onTeamsAdd={onTeamsAdd} />
       <UserList users={appState.userList} />
     </main>
   );
